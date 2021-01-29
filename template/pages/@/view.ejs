@@ -15,16 +15,37 @@
     data-cms-collection="<%= _.route.collection %>"
   <% } %>
 >
-  <%- await include('@/layout/menu') %>
 
-  <main role="main" id="main">
-    <%- await include('@/layout/header') %>
-    <%- await include('@/layout/sections') %>
-    <%- await include('@/layout/footer') %>
-  </main>
+  <% if (1 == 1) { %> 
+    
+    <style>
+      body { text-align: center; padding: 150px; }
+      h1 { font-size: 50px; }
+      body { font: 20px Helvetica, sans-serif; color: #333; }
+      article { display: block; text-align: left; width: 650px; margin: 0 auto; }
+      a { color: #b000dc; text-decoration: underline; }
+      a:hover { color: #333; text-decoration: underline; }
+    </style>
+    
+    <article>
+        <h1>Voltamos em breve!</h1><br>
+        <div>
+          Desculpe o transtorno, mas estamos realizando uma manutenção em nossa loja.<br> <br>Se precisar de ajuda <a href="//wa.me/5511911101408">clique aqui</a> e fale com a gente no Whatsapp.</p>
+            <br><p>&mdash; Guieli Shoes</p>
+        </div>
+    </article>
+  <% } else { %>
+    <%- await include('@/layout/menu') %>
 
-  <%- await include('@/json') %>
-  <%- await include('@/scripts') %>
+    <main role="main" id="main">
+      <%- await include('@/layout/header') %>
+      <%- await include('@/layout/sections') %>
+      <%- await include('@/layout/footer') %>
+    </main>
+
+    <%- await include('@/json') %>
+    <%- await include('@/scripts') %>
+  <% } %>
 </body>
 
 </html>
